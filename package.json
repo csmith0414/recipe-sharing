@@ -1,0 +1,20 @@
+{
+  "name": "recipe-sharing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csmith0414/recipe-sharing.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/csmith0414/recipe-sharing/issues"
+  },
+  "homepage": "https://github.com/csmith0414/recipe-sharing#readme"
+}
