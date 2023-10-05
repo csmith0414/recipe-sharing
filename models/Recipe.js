@@ -24,17 +24,17 @@ Recipe.init(
       allowNull: false,
     },
     ingredients: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT(),
       allowNull: false,
     },
     instructions: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT(),
       allowNull: false,
     },
     //References the user_id from the User model as the user who created it
     created_user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       references: {
         model: 'user',
         key: 'id',
