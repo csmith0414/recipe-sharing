@@ -1,0 +1,88 @@
+/* General page styles */
+
+header {
+    font-family: "Jomolhari", serif;
+  }
+  
+  body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    font-family: "Jomolhari", serif;
+    background-color: lightskyblue;
+    color: #f7f7f7;
+    padding: 16px;
+    margin-bottom: 5px;
+  }
+  
+  #blogName {
+    color: #ffe5ec;
+  }
+  
+  main {
+    font-family: "Jomolhari", serif;
+    margin-top: -5px;
+    background-color: lightblue;
+  }
+  
+  .homepage-main {
+    margin-top: 34px;
+  }
+  
+  .user-name {
+    background-color: #ffffff;
+  }
+  
+  .blogPost-main {
+    margin-top: 34px;
+  }
+  
+  /* Nav styles */
+  
+  .navBar {
+    background-color: lightsteelblue;
+  }
+  
+  #logout {
+    background-color: #fcfcfc;
+  }
+  
+  /* Input/textarea styles */
+  
+  #titleInput,
+  #bodyInput,
+  #comment,
+  #email-login,
+  #password-login,
+  #name-signup,
+  #email-signup,
+  #password-signup {
+    background-color: #0150fc;
+  }
+  
+  /* Button styles */
+  
+  .btn {
+    background-color: #f6f3f4;
+  }
+  
+  /* Card styles */
+  
+  .card-header {
+    background-color: #8faef0;
+  }
+  
+  .card-body {
+    background-color: #fafafa;
+  }
+  
+  .card {
+    background-color: #857dd6;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+  }
