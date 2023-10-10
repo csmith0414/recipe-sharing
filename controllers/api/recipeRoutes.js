@@ -6,7 +6,7 @@ router.get('/:id', async (req, res) => {
       // Get to display information on selected recipe
       const recipeData = await Recipe.findOne({
         where: { id: req.params.id },
-        attributes: ['title', 'ingredients', 'instructions'],
+        attributes: ['title', 'created_user_id', 'ingredients', 'instructions'],
       });
         console.log(recipeData);
       // Pass serialized data into Handlebars.js template
