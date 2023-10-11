@@ -2,16 +2,19 @@
     {
       "name": "Martha Stewart",
       "email": "insidertrading@htomail.com",
-      "password": "password123"
+      "password": "password123",
+      "id": 1
     },
     {
       "name": "Gordon Ramsay",
       "email": "bestenglishchef@gmail.com",
-      "password": "IamNUMBERone"
+      "password": "IamNUMBERone",
+      "id": 2
     },
     {
       "name": "Emeril Lagasse",
       "email": "topchef@yahoo.com",
-      "password": "BAM123456!"
+      "password": "BAM123456!",
+      "id": 3
     }
   ]

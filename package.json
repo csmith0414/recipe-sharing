@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/csmith0414/recipe-sharing#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",

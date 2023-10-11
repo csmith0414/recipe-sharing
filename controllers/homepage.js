@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Recipe } = require('../../models');
-const withAuth = require('../../utils/auth');
+const { Recipe } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
@@ -14,6 +14,15 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data into Handlebars.js template
     res.render('homepage', { recipes });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/login', async (req, res) => {
+  try {
+    // Pass serialized data into Handlebars.js template
+    res.render('login');
   } catch (err) {
     res.status(500).json(err);
   }
