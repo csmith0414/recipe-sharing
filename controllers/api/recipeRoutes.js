@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Recipe } = require('../../models');
+const { Recipe, User } = require('../../models');
 
 router.get('/:id', async (req, res) => {
     try {
@@ -7,6 +7,7 @@ router.get('/:id', async (req, res) => {
       const recipeData = await Recipe.findOne({
         where: { id: req.params.id },
         attributes: ['title', 'created_user_id', 'ingredients', 'instructions'],
+        include: [{model: User}],
       });
         console.log(recipeData);
       // Pass serialized data into Handlebars.js template
