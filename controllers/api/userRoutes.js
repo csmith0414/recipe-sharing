@@ -20,6 +20,8 @@ router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
+    console.log(userData);
+
     if (!userData) {
       console.log("no user found");
       res
@@ -28,7 +30,9 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    const validPassword = await userData.checkPassword(req.body.password);
+    console.log("THIS IS THE PASSWORD " + req.body.password)
+
+    const validPassword = await User.findOne({where: {password: req.body.password}});
 
     if (!validPassword) {
       console.log("no password match");
