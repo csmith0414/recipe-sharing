@@ -4,6 +4,7 @@ const loginFormHandler = async (event) => {
     // Collect values from the login form
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
+
   
     if (email && password) {
       // Send a POST request to the API endpoint
@@ -16,10 +17,10 @@ const loginFormHandler = async (event) => {
 
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
-        console.log(response);
-        alert(response.statusText);
+        console.log(response + ': ' + response.statusText);
+        alert("Incorrect email or password, please try again");
       }
     }
   };
@@ -39,9 +40,10 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
-        alert(response.statusText);
+        console.log(response + ': ' + response.statusText);
+        alert("Invalid email or password, please try again");
       }
     }
   };
