@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
 
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
         console.log(response + ': ' + response.statusText);
         alert("Invalid Login Information: Email/Password incorrect!");
@@ -40,7 +40,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
         alert(response.statusText);
       }
