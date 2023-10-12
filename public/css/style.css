@@ -1,17 +1,17 @@
 /* General page styles */
 
 header {
-    font-family: "Jomolhari", serif;
+  font-family: 'Libre Baskerville', serif;
   }
   
   body {
     background-color: lightblue;
   }
   
-  h1 {
-    font-family: "Jomolhari", serif;
-    background-color: lightskyblue;
-    color: #f7f7f7;
+  h2 {
+    font-family: 'Libre Baskerville', serif;
+    background-color: lightblue;
+    color: white;
     padding: 16px;
     margin-bottom: 5px;
   }
@@ -21,7 +21,7 @@ header {
   }
   
   main {
-    font-family: "Jomolhari", serif;
+    font-family: 'Libre Baskerville', serif;
     margin-top: -5px;
     background-color: lightblue;
   }
@@ -37,7 +37,11 @@ header {
   .blogPost-main {
     margin-top: 34px;
   }
-  
+  .highlight {
+    color:white;
+    font-size: larger;
+    text-decoration: underline;
+  }
   /* Nav styles */
   
   .navBar {
@@ -58,13 +62,13 @@ header {
   #name-signup,
   #email-signup,
   #password-signup {
-    background-color: #0150fc;
+    background-color: white;
   }
   
   /* Button styles */
   
   .btn {
-    background-color: #f6f3f4;
+    background-color: lightgray;
   }
   
   /* Card styles */
