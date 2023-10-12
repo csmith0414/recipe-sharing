@@ -1,12 +1,14 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const bcrypt = require("bcrypt");
 
 router.post('/', async (req, res) => {
   try {
-    const userData = await User.create(req.body);
+    console.log(req.body)
+    var userData = await User.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.dataValues.id;
       req.session.logged_in = true;
 
       res.status(200).json(userData);
@@ -20,7 +22,7 @@ router.post('/login', async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
-    console.log(userData);
+    console.log(userData)
 
     if (!userData) {
       console.log("no user found");
@@ -32,9 +34,10 @@ router.post('/login', async (req, res) => {
 
     console.log("THIS IS THE PASSWORD " + req.body.password)
 
-    const validPassword = await User.findOne({where: {password: req.body.password}});
+    const validPassword = await userData.checkPassword(req.body.password);
+    const validPassword2 = await User.findOne({ where: { password: req.body.password } });
 
-    if (!validPassword) {
+    if (!validPassword && !validPassword2) {
       console.log("no password match");
       res
         .status(400)

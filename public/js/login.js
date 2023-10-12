@@ -20,7 +20,7 @@ const loginFormHandler = async (event) => {
         document.location.replace('/');
       } else {
         console.log(response + ': ' + response.statusText);
-        alert("Invalid Login Information: Email/Password incorrect!");
+        alert("Incorrect email or password, please try again");
       }
     }
   };
@@ -42,7 +42,8 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert(response.statusText);
+        console.log(response + ': ' + response.statusText);
+        alert("Invalid email or password, please try again");
       }
     }
   };
