@@ -32,8 +32,6 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    console.log("THIS IS THE PASSWORD " + req.body.password)
-
     const validPassword = await userData.checkPassword(req.body.password);
     const validPassword2 = await User.findOne({ where: { password: req.body.password } });
 
