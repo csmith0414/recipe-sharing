@@ -1,20 +1,17 @@
 <div class="row mb-4 project">
-  <div class="col-md-5">
+  <div class="col-md-7">
     <h2>
-        {{recipe.dataValue.title}}
+      {{recipe.dataValue.title}}
     </h2>
-    <p>Created by {{recipe.user.dataValues.name}}</p>
+    <p class="highlight">Created by:</p>
+    <p>{{recipe.user.dataValues.name}}</p>
   </div>
   <div class="col-md-7">
-    <p>
-      Ingredients:
-      {{recipe.dataValues.ingredients}}
-    </p>
+    <p class="highlight">Ingredients:</p>
+    <p>{{recipe.dataValues.ingredients}}</p>
   </div>
-    <div class="col-md-7">
-    <p>
-      Instructions:
-      {{recipe.dataValues.instructions}}
-    </p>
+  <div class="col-md-7">
+    <p class="highlight">Instructions:</p>
+    <p>{{recipe.dataValues.instructions}}</p>
   </div>
 </div>
