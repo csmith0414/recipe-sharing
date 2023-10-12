@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
 
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/');
+        document.location.replace('/api/userRecipesRoutes');
       } else {
         console.log(response + ': ' + response.statusText);
         alert("Incorrect email or password, please try again");
