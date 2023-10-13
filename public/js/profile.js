@@ -1,21 +1,23 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#recipe-title').value.trim();
+    const title = document.querySelector('#recipe-title').value.trim();
     const ingredients = document.querySelector('#recipe-ingredients').value.trim();
     const instructions = document.querySelector('#recipe-instructions').value.trim();
   
-    if (name && ingredients && instructions) {
-      const response = await fetch(`/api/userRoutes`, {
+    if (title && ingredients && instructions) {
+      const response = await fetch(`/api/userRecipes`, {
         method: 'POST',
-        body: JSON.stringify({ name, ingredients, instructions }),
+        body: JSON.stringify({ title, ingredients, instructions }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
+
+      console.log("profile.js " + response);
   
       if (response.ok) {
-        document.location.replace('/userRecipes');
+        document.location.replace('/profile');
       } else {
         alert('Failed to create profile');
       }
@@ -23,15 +25,19 @@ const newFormHandler = async (event) => {
   };
   
   const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
+    console.log("no it's not doing an id")
+    console.log(event)
+    if (event.target.hasAttribute('id')) {
+
+      const id = event.target.getAttribute('id');
+      console.log("yeah it is doing an id " + id)
   
-      const response = await fetch(`/api/recipeRoutes/${id}`, {
+      const response = await fetch(`/api/userRecipes/${id}`, {
         method: 'DELETE',
       });
   
       if (response.ok) {
-        document.location.replace('/userRecipes');
+        document.location.replace('/profile');
       } else {
         alert('Failed to delete project');
       }
