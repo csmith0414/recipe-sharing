@@ -14,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
       const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
   
       // Pass serialized data into Handlebars.js template
-      res.render('userRecipes', { recipes });
+      res.render('userRecipes', { recipes, logged_in: req.session.logged_in });
     } catch (err) {
       res.status(500).json(err);
     }

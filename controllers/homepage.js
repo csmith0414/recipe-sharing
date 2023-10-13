@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
 
     // Pass serialized data into Handlebars.js template
-    res.render('homepage', { recipes });
+    res.render('homepage', { recipes, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
 router.get('/login', async (req, res) => {
   try {
     // Pass serialized data into Handlebars.js template
-    res.render('login');
+    res.render('login', { logged_in: false });
   } catch (err) {
     res.status(500).json(err);
   }
