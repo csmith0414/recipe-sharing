@@ -8,14 +8,6 @@ header {
     background-color: lightblue;
   }
   
-  h2 {
-    font-family: 'Libre Baskerville', serif;
-    background-color: lightblue;
-    color: white;
-    padding: 16px;
-    margin-bottom: 5px;
-  }
-  
   #blogName {
     color: #ffe5ec;
   }
@@ -38,7 +30,7 @@ header {
     margin-top: 34px;
   }
   .highlight {
-    color:white;
+    color: black;
     font-size: larger;
     text-decoration: underline;
   }
