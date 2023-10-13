@@ -24,7 +24,7 @@ router.get('/', withAuth, async (req, res) => {
     try {
       const newRecipe = await Recipe.create({
         ...req.body,
-        user_id: req.session.user_id,
+        created_user_id: req.session.user_id,
       });
   
       res.status(200).json(newRecipe);
@@ -35,10 +35,11 @@ router.get('/', withAuth, async (req, res) => {
   
   router.delete('/:id', withAuth, async (req, res) => {
     try {
+
       const recipeData = await Recipe.destroy({
         where: {
           id: req.params.id,
-          user_id: req.session.user_id,
+          created_user_id: req.session.user_id,
         },
       });
   
