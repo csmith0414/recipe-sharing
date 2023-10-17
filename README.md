@@ -17,7 +17,9 @@
 7. For the recipes, we allowed the user the ability to delete their recipes after creation, figuring this could be a super helpful feature! 
 <br>(just incase they realized that rock pot pie is *_not_* such a good idea)
 
-8. This project was the second collaborative coding effort for this boot camp, and was a great lesson in things like working towards a shared goal in a team, divvying up tasks, and sharing creative problem-solving techniques amongst each other to find success!
+8. With a big thanks to Sean, we implimented an "Email me this" button on the Recipe pages that will send the recipe to the corresponding email associate to your user account using nodemailer. We figured this would be a decent way to catalog your emails elsewhere!
+
+9. This project was the second collaborative coding effort for this boot camp, and was a great lesson in things like working towards a shared goal in a team, divvying up tasks, and sharing creative problem-solving techniques amongst each other to find success!
 
 ## Installation and Usage
 
