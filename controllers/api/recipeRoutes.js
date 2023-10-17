@@ -9,8 +9,8 @@ router.get('/:id', async (req, res) => {
         attributes: ['title', 'created_user_id', 'ingredients', 'instructions'],
         include: [{model: User}],
       });
-      // Pass serialized data into Handlebars.js template
-      res.render('recipe', {recipe: recipeData, logged_in: req.session.logged_in });
+      // Pass data into Handlebars.js template
+      res.render('recipe', {recipe: recipeData, logged_in: req.session.logged_in, email: req.session.email});
     } catch (err) {
       res.status(500).json(err);
     }
