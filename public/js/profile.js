@@ -25,12 +25,10 @@ const newFormHandler = async (event) => {
   };
   
   const delButtonHandler = async (event) => {
-    console.log("no it's not doing an id")
     console.log(event)
     if (event.target.hasAttribute('id')) {
 
       const id = event.target.getAttribute('id');
-      console.log("yeah it is doing an id " + id)
   
       const response = await fetch(`/api/userRecipes/${id}`, {
         method: 'DELETE',
