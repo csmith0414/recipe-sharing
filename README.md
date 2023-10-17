@@ -45,11 +45,13 @@ If you plan to just take a look at functionality, feel free to use the link to t
 
 * Ability to send recipes to specific emails, rather than just the ones tied to accounts
 
+* Ability to upload images that add to the recipe pages
+
 * Extended front-end development to have a broader appeal and really fit that 'cozy food' vibe
 
 * Expanding out the profile, and adding new features like a profile picture, bio, etc. to increase social activity on the site, allowing other users to visit each other's profile
 
-* Adding the ability to comment on recipes and profile pages to increase the social aspect of the site
+* Adding the ability to like recipes and comment on recipes/profile pages to increase the social aspect of the site
 
 ```
 
